@@ -16,7 +16,6 @@ class User(TimestampMixin, Base):
 
     notifications = relationship('Notification', back_populates='user')
 
-
 class Notification(TimestampMixin, Base):
     __tablename__ = 'notification'
 

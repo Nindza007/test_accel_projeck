@@ -31,6 +31,7 @@ class SessionManager:
         return self.async_session()
 
 
+
 async def get_async_session() -> AsyncGenerator:
     async_session = SessionManager().get_session()
 

@@ -22,7 +22,6 @@ async def get_all_users(session: AsyncSession = Depends(get_async_session)):
     users = (await session.execute(q)).scalars().all()
     return UserList(count=len(users), users=parse_obj_as(List[UserSchema], users))
 
-
 @user_router.post('/', name='Добавить пользователя', response_model=UserSchema)
 async def create_user(user: UserSchema, session: AsyncSession = Depends(get_async_session)):
     u = User()

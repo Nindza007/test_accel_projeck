@@ -3,7 +3,6 @@ from typing import List, Optional
 
 from pydantic import BaseModel
 
-
 class UserSchema(BaseModel):
     id: Optional[int]
     username: str

@@ -5,7 +5,6 @@ from sqlalchemy.orm import relationship
 from db.base import Base
 from db.mixins import TimestampMixin
 
-
 class User(TimestampMixin, Base):
     __tablename__ = 'user'
 
